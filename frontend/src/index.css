@@ -1,0 +1,28 @@
+main {
+  min-height: 80vh;
+  margin: 0%;
+  padding: 0%;
+  background-color: rgb(255, 255, 255);
+
+  /* background-image: url(""); */
+  /* background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+h3 {
+  padding: 1rem 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
