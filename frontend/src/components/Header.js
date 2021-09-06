@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { logout } from "../actions/userActions";
 
@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <Navbar sticky="top" bg="dark" variant="dark">
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>PFMS</Navbar.Brand>
@@ -25,6 +25,14 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             {/* <Route render={({ history }) => <SearchBox history={history} />} /> */}
             <Nav className="ml-auto">
+              <LinkContainer to="/results">
+                <Nav.Link>
+                  <Button size="sm" variant="primary">
+                    {" "}
+                    Results{" "}
+                  </Button>
+                </Nav.Link>
+              </LinkContainer>
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id={"username"}>
                   <LinkContainer to="/profile">
