@@ -22,7 +22,7 @@ router.route("/:id/marks").post(protect, judge, createProjectMark);
 
 router.route("/myprojects").get(protect, getMyprojects);
 
-router.route("/approved").get(protect, judge, listApprovedProjects);
+router.route("/approved").get(protect, listApprovedProjects);
 
 router
   .route("/moderator/:id")
