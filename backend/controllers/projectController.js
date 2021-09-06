@@ -156,12 +156,13 @@ const createProjectMark = asyncHandler(async (req, res) => {
 
     project.totalMarkedBy = project.numbers.length;
 
-    project.totalNumbers = project.numbers.reduce(
-      (acc, item) => item.number + acc,
-      0
-    );
+    project.totalNumbers =
+      project.numbers.reduce((acc, item) => item.number + acc, 0) /
+      project.numbers.length;
 
     await project.save();
+
+
     res.status(201).json({ message: "Marks added" });
   } else {
     res.status(404);
