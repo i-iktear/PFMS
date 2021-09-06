@@ -14,7 +14,7 @@ router.route("/active").get(getActiveSessions);
 
 router
   .route("/")
-  .get(protect, moderator, getSessions)
+  .get(protect, getSessions)
   .post(protect, moderator, createdSession);
 
 router
@@ -22,7 +22,5 @@ router
   .get(getSessionById)
   .delete(protect, moderator, deleteSession)
   .put(protect, moderator, updateSession);
-
-
 
 export default router;
