@@ -20,6 +20,7 @@ import ProjectEditScreenMy from "./screens/ProjectEditScreenMy";
 import ProjectListScreenForModerator from "./screens/ProjectListScreenForModerator";
 import ProjectEditScreenForModerator from "./screens/ProjectEditScreenForModerator";
 import ProjectListScreenForJudge from "./screens/ProjectListScreenForJudge";
+import ResultScreen from "./screens/ResultScreen";
 
 function App() {
   return (
@@ -84,6 +85,7 @@ function App() {
             component={ProjectListScreenForJudge}
             exact
           />
+          <Route path="/results" component={ResultScreen} exact />
         </Container>
       </main>
       <Footer />
