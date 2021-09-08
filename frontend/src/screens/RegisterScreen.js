@@ -52,7 +52,10 @@ const RegisterScreen = ({ location, history }) => {
           <Form onSubmit={submitHandler}>
             <Form.Row>
               <Form.Group as={Col} controlId="name">
-                <Form.Label>Name</Form.Label>
+                <Form.Label>
+                  {" "}
+                  <b>Name</b>{" "}
+                </Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Enter your name"
@@ -62,7 +65,10 @@ const RegisterScreen = ({ location, history }) => {
               </Form.Group>
 
               <Form.Group as={Col} controlId="universityId">
-                <Form.Label>University ID</Form.Label>
+                <Form.Label>
+                  {" "}
+                  <b>University ID</b>{" "}
+                </Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Enter your University ID"
@@ -73,7 +79,10 @@ const RegisterScreen = ({ location, history }) => {
             </Form.Row>
 
             <Form.Group controlId="email">
-              <Form.Label>Email Address</Form.Label>
+              <Form.Label>
+                {" "}
+                <b>Email Address</b>{" "}
+              </Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Enter your email"
@@ -83,7 +92,10 @@ const RegisterScreen = ({ location, history }) => {
             </Form.Group>
             <Form.Row>
               <Form.Group as={Col} controlId="password">
-                <Form.Label>password</Form.Label>
+                <Form.Label>
+                  {" "}
+                  <b>Password</b>{" "}
+                </Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="Enter your password"
@@ -93,7 +105,10 @@ const RegisterScreen = ({ location, history }) => {
               </Form.Group>
 
               <Form.Group as={Col} controlId="confirmPassword">
-                <Form.Label>Confirm Password</Form.Label>
+                <Form.Label>
+                  {" "}
+                  <b>Confirm Password</b>{" "}
+                </Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="Re type your password"

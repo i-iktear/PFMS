@@ -115,6 +115,8 @@ const ProjectEditScreenMy = ({ match, history }) => {
                   type="number"
                   placeholder="Enter Total Team Members Count"
                   value={teammembers}
+                  min="1"
+                  max="3"
                   onChange={(e) => setTeammembers(e.target.value)}
                 ></Form.Control>
               </Form.Group>
