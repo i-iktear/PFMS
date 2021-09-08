@@ -119,15 +119,14 @@ const ProjectScreen = ({ match, history }) => {
         <Col md={3}>
           <h1> </h1>
           <h1> </h1>
-
-          <Card>
-            <ListGroup variant="flush">
-              <ListGroup.Item>
-                <h2>Give Marks</h2>
-                {projectMarkError && (
-                  <Message variant="danger"> {projectMarkError} </Message>
-                )}
-                {userInfo?.isJudge ? (
+          {userInfo?.isJudge && (
+            <Card>
+              <ListGroup variant="flush">
+                <ListGroup.Item>
+                  <h2>Give Marks</h2>
+                  {projectMarkError && (
+                    <Message variant="danger"> {projectMarkError} </Message>
+                  )}
                   <Form onSubmit={submitHandler}>
                     <Form.Group controlId="mark">
                       <Form.Label>Mark</Form.Label>
@@ -136,7 +135,6 @@ const ProjectScreen = ({ match, history }) => {
                         type="number"
                         min="40"
                         max="100"
-                        step="10"
                         value={mark}
                         onChange={(e) => setMark(e.target.value)}
                       ></Form.Control>
@@ -150,16 +148,18 @@ const ProjectScreen = ({ match, history }) => {
                         onChange={(e) => setComment(e.target.value)}
                       ></Form.Control>
                     </Form.Group>
-                    <Button type="submit" variant="primary">
+                    <Button
+                      type="submit"
+                      className="btn btn-lg btn-primary"
+                      variant="primary"
+                    >
                       Submit
                     </Button>
                   </Form>
-                ) : (
-                  <Message> You are not a Judge to Mark a Project </Message>
-                )}
-              </ListGroup.Item>
-            </ListGroup>
-          </Card>
+                </ListGroup.Item>
+              </ListGroup>
+            </Card>
+          )}
           <h2>Marked Given By other Judges</h2>
           {project?.numbers?.length === 0 && (
             <Message> No one Marked yet </Message>
@@ -178,23 +178,7 @@ const ProjectScreen = ({ match, history }) => {
         </Col>
       </Row>
       <Row>
-        <Col md={6}>
-          {/* <h2>Marked Given By other Judges</h2>
-          {project?.numbers?.length === 0 && (
-            <Message> No one Marked yet </Message>
-          )}
-          <ListGroup variant="flush">
-            {project?.numbers?.map((mark) => (
-              <ListGroup.Item key={mark._id}>
-                <hr />
-                <strong>{mark.name}</strong>
-                <h2>Marks :{mark.number} </h2>
-                <p> {mark.createdAt.substring(0, 10)} </p>
-                <p> {mark.comment} </p>
-              </ListGroup.Item>
-            ))}
-          </ListGroup> */}
-        </Col>
+        <Col md={6}></Col>
       </Row>
     </>
   );

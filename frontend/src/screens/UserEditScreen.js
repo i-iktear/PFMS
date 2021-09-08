@@ -67,7 +67,7 @@ const UserEditScreen = ({ match, history }) => {
             Edit User <i className="fas fa-user-edit"> </i>
           </h1>
         </center>
-        <br/>
+        <br />
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant="danger"> {errorUpdate} </Message>}
         {loading ? (
