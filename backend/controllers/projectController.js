@@ -44,7 +44,7 @@ const registerProject = asyncHandler(async (req, res) => {
 // @route GET /api/projects
 // @access public
 const getProjectsModerator = asyncHandler(async (req, res) => {
-  const project = await Project.find();
+  const project = await Project.find().sort({ createdAt: "desc" });
   res.json(project);
 });
 
@@ -52,7 +52,9 @@ const getProjectsModerator = asyncHandler(async (req, res) => {
 // @route GET /api/projects/myprojects
 // @access public
 const getMyprojects = asyncHandler(async (req, res) => {
-  const orders = await Project.find({ user: req.user._id });
+  const orders = await Project.find({ user: req.user._id }).sort({
+    createdAt: "desc",
+  });
   res.json(orders);
 });
 
@@ -122,7 +124,9 @@ const updateProjectByModerator = asyncHandler(async (req, res) => {
 // @route GET /api/projects/approved
 // @access private/Judge
 const listApprovedProjects = asyncHandler(async (req, res) => {
-  const project = await Project.find({ isApproved: true });
+  const project = await Project.find({ isApproved: true }).sort({
+    createdAt: "desc",
+  });
   if (project) {
     res.status(201).json(project);
   }
@@ -161,7 +165,6 @@ const createProjectMark = asyncHandler(async (req, res) => {
       project.numbers.length;
 
     await project.save();
-
 
     res.status(201).json({ message: "Marks added" });
   } else {
