@@ -17,7 +17,7 @@ const createdSession = asyncHandler(async (req, res) => {
 // @route GET /api/sessions
 // @access private/Moderator
 const getSessions = asyncHandler(async (req, res) => {
-  const session = await Session.find();
+  const session = await Session.find().sort({ createdAt: "desc" });
   res.json(session);
 });
 
