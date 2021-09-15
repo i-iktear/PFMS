@@ -52,26 +52,6 @@ const HomeScreen = ({ history }) => {
           </Button>
         </Link>
       </Container>
-      {/* 
-      {!userInfo.isAdmin ? (
-        !userInfo.isJudge ? (
-          !userInfo.isModerator ? (
-            <Container style={containerStyle}>
-              <Link to={`/project/createproject`}>
-                <Button style={buttonStyle}>
-                  Apply For Project Fair( {activeSession.name} )
-                </Button>
-              </Link>
-            </Container>
-          ) : (
-            <div></div>
-          )
-        ) : (
-          <div></div>
-        )
-      ) : (
-        <div></div>
-      )} */}
     </div>
   );
 };

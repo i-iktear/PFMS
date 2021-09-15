@@ -10,7 +10,7 @@ import {
   deleteUser,
   updateUser,
 } from "../controllers/userController.js";
-import { protect, admin } from "../middleware/authMiddlware.js";
+import { protect, admin, moderator } from "../middleware/authMiddlware.js";
 
 router.post("/login", authUser);
 router
