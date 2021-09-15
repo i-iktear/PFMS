@@ -20,8 +20,12 @@ const UserEditScreenForModerator = ({ match, history }) => {
 
   const dispatch = useDispatch();
 
-  const userDetails = useSelector((state) => state.userDetails);
-  const { loading, error, user } = userDetails;
+  const userDetailsForModerator = useSelector(
+    (state) => state.userDetailsForModerator
+  );
+  const { loading, error, user } = userDetailsForModerator;
+
+  console.log(user);
 
   const userUpdateByModerator = useSelector(
     (state) => state.userUpdateByModerator
@@ -110,7 +114,7 @@ const UserEditScreenForModerator = ({ match, history }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group  controlId="isjudge">
+            <Form.Group controlId="isjudge">
               <Form.Check
                 type="checkbox"
                 label="Is Judge?"
