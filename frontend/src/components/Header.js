@@ -67,7 +67,7 @@ const Header = () => {
               )}
 
               {userInfo && userInfo.isModerator && (
-                <NavDropdown title="Moderator" id="moderatormenu">
+                <NavDropdown title="Convener" id="moderatormenu">
                   <LinkContainer to="/moderator/userlist">
                     <NavDropdown.Item>Users</NavDropdown.Item>
                   </LinkContainer>

@@ -121,7 +121,7 @@ const UserEditScreen = ({ match, history }) => {
               <Form.Group as={Col} controlId="ismoderator">
                 <Form.Check
                   type="checkbox"
-                  label="Is Moderator?"
+                  label="Is a Convener?"
                   checked={isModerator}
                   onChange={(e) => setIsModerator(e.target.checked)}
                 ></Form.Check>

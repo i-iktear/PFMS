@@ -42,7 +42,7 @@ const HomeScreen = ({ history }) => {
   }, [dispatch, history, userInfo]);
 
   return (
-    <div className="justify-content-md-center">
+    <div>
       {error && <Message variant="danger">{error}</Message>}
       {loading && <Loader />}
       <Container style={containerStyle}>

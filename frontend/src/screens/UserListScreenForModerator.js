@@ -52,7 +52,7 @@ const UserListScreenForModerator = ({ history }) => {
               <th>Name</th>
               <th>Email</th>
               <th>Admin</th>
-              <th>Moderator</th>
+              <th>Convener</th>
               <th>judge</th>
               <th></th>
               <th></th>
