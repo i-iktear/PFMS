@@ -28,9 +28,13 @@ const RegisterScreen = ({ location, history }) => {
   }, [history, redirect, userInfo]);
 
   const submitHandler = (e) => {
+    const regEx = "@diu.edu.bd";
+
     e.preventDefault();
     if (password !== confirmpassword) {
       setMessage("Password do not match");
+    } else if (!email.includes(regEx)) {
+      setMessage("Please Provide your Edu Email Provided by DIU");
     } else {
       dispatch(register(name, email, universityId, password));
     }
